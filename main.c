@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 #define N_VALORI_DA_INSERIRE 7
 #define VALORE_MASSIMO 3
 
@@ -51,8 +52,18 @@ int main(int argc, char** argv) {
  * NOTA: considera 0^0=1
  */
 float potenza(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int i;
+    float ris;
+    if(esponente==0)
+    {
+        ris=1;
+    }
+    else 
+    {
+        for(i=0;i<esponente;i++)
+            ris=base*base;
+    }
+    return ris;
 }
 
 /*
@@ -65,6 +76,6 @@ float potenza(int base, int esponente) {
  * dopo la chiamata.
  */
 void aggiornaFrequenza(int frequenze[], int valore) {
-    // TODO Implementa il corpo della funzione
+    frequenze[valore]++;
     return;
 }
